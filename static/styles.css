@@ -1,0 +1,28 @@
+body {
+    background-color: #ADB2BE;
+}
+
+ .navbar-brand
+{
+    font-size: xx-large;
+}
+
+.custom-navbar {
+    background-color: #637AB4;
+  }
+
+th, td {
+    border: 2px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+h5 {
+    text-align: right;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+}
