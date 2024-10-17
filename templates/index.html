@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %} 
+
+{% block main %}
+<table style='margin-top: 30px' class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col"> Date </th>
+        <th scope="col"> Task </th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for date, values in t.items() %}
+          <tr>
+            <td rowspan="{{ len_dates[date] }}"> {{ date }} </td>
+            {% for value in values %}
+            <td>  {{ value[0] }}  </td>
+          </tr>
+            {% endfor %}
+          {% endfor %}
+        </body>
+      </table>
+    </tbody>
+{% endblock %}

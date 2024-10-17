@@ -1,5 +1,13 @@
 {% extends "layout.html" %}
-
 {% block title %}
-    Add
-{% endblock %} 
+    Add Task
+{% endblock %}
+
+{% block main %}
+    <form action="/add" method="POST">
+        <div class="mb-3">
+            <input autofocus class="form-control" name="task" placeholder="Task" type="text" required>
+        </div>
+        <button name="Save" style='width: 80px' class="form-group btn btn-primary" type="submit">Save</button>
+    </form>
+{% endblock %}
