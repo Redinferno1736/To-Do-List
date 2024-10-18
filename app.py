@@ -81,15 +81,15 @@ def login():
 
     return render_template("login.html")
 
-@app.route("/add")
+@app.route("/add", methods=["GET", "POST"])
 @login_req
 def add():
     user_id = session["user_id"]
-    if request.method=="POST":
+    if request.method == "POST":
         task=request.form.get("task")
         date=date.today()
-        tasks={"user_id": user_id, "task": task, "date": date}
-        tasks_collection.insert_one(tasks)
+        task={"user_id": user_id, "task": task, "date": date}
+        tasks_collection.insert_one(task)
         return redirect("/")
     else:
         return render_template("add.html")
